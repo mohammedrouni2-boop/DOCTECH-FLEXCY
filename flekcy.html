@@ -3,125 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>فليكسي - DOCTECH FLEXCY</title>
+  <title>صفحة فليكسي - DOCTECH FLEXY</title>
   <style>
-    body {
-      font-family: "Cairo", sans-serif;
-      background-color: #f6f8fc;
-      color: #001f3f;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 15px;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .container {
-      margin: 50px auto;
-      width: 90%;
-      max-width: 400px;
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    label {
-      display: block;
-      text-align: right;
-      font-weight: 600;
-      margin-bottom: 5px;
-      margin-top: 15px;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      outline: none;
-      transition: 0.3s;
-    }
-
-    input:focus {
-      border-color: #0066cc;
-      box-shadow: 0 0 5px rgba(0,102,204,0.3);
-    }
-
-    button {
-      margin-top: 20px;
-      width: 100%;
-      padding: 12px;
-      background-color: #003366;
-      color: white;
-      font-size: 17px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background-color: #0055aa;
-    }
-
-    .result {
-      margin-top: 25px;
-      font-size: 16px;
-      font-weight: bold;
-      color: green;
-    }
+    body {font-family:'Cairo',sans-serif;background:#f5f7fa;color:#222;text-align:center;margin:0}
+    header {background:#003366;color:#fff;padding:20px;font-size:22px;font-weight:bold}
+    .btn {display:inline-block;padding:12px 25px;background:#007bff;color:#fff;border-radius:8px;text-decoration:none;margin-top:20px}
   </style>
 </head>
 <body>
-  <header>DOCTECH FLEXCY - فليكسي</header>
-
-  <div class="container">
-    <h2>إرسال رصيد</h2>
-    <label>رقم الهاتف</label>
-    <input type="tel" id="phone" placeholder="0X XX XX XX XX">
-
-    <label>المبلغ بالدج</label>
-    <input type="number" id="amount" placeholder="مثلاً: 100">
-
-    <button onclick="sendFlexy()">إرسال الرصيد</button>
-
-    <div class="result" id="result"></div>
-  </div>
-
-  <script>
-    function sendFlexy() {
-      const phone = document.getElementById('phone').value.trim();
-      const amount = document.getElementById('amount').value.trim();
-      const result = document.getElementById('result');
-
-      if (phone === '' || amount === '') {
-        result.style.color = 'red';
-        result.textContent = '❌ الرجاء إدخال جميع المعلومات.';
-        return;
-      }
-
-      if (phone.length < 9) {
-        result.style.color = 'red';
-        result.textContent = '⚠️ رقم الهاتف غير صحيح.';
-        return;
-      }
-
-      result.style.color = '#0066cc';
-      result.textContent = '⏳ جاري إرسال الرصيد...';
-
-      setTimeout(() => {
-        result.style.color = 'green';
-        result.textContent = `✅ تم إرسال ${amount} دج إلى ${phone} بنجاح!`;
-      }, 2000);
-    }
-  </script>
+  <header>💸 صفحة فليكسي - DOCTECH FLEXY</header>
+  <p>مرحبًا بك في صفحة فليكسي الخاصة بـ DOCTECH 💡</p>
+  <p>هنا يمكنك إدارة أو إرسال عمليات فليكسي بسهولة 🔄</p>
+  <a href="index.html" class="btn">🔙 الرجوع إلى الصفحة الرئيسية</a>
 </body>
 </html>
